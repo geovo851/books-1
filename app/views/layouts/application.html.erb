@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Books1</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <% flash.each do |key, value| %>
-    <%= content_tag(:div, value, class: "alert #{bootstrap_class_for(key)} flash") %>
-  <% end %>
-  <% if user_signed_in? %>
-      <span>Здравствуйте, <%= current_user.email %></span>
-      <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
-  <% else %>
-      <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
-  <% end %>
-  <%= yield %>
-
-</body>
+  <head>
+    <title><%= yield(:title)%> | Books online</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class='main-page-content'>
+      <div class="container">
+        <%= render 'shared/navbar' %>
+        <% flash.each do |key, value| %>
+          <%= content_tag(:div, value, class: "alert #{bootstrap_class_for(key)} flash") %>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; Books online 2016. All Rights Reserved. </p>
+    </footer>
+  </body>
 </html>

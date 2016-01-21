@@ -1,0 +1,49 @@
+@import "bootstrap";
+
+.main-page-content {
+  padding-top: 60px;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.5em;
+  color: #00FFFF;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 15px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.navbar {
+  background-color: #003366;
+}
+
+/* footer */
+
+footer {
+  padding-left: 100px;
+  text-align: center;
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 10pt;
+
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
