@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: "alert #{bootstrap_class_for(key)} flash") %>
+  <% end %>
+  <% if user_signed_in? %>
+      <span>Здравствуйте, <%= current_user.email %></span>
+      <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+  <% else %>
+      <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+  <% end %>
+  <%= yield %>
 
 </body>
 </html>
