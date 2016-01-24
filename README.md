@@ -2,11 +2,11 @@
 
 ####Getting Started
 
-1. Create a database:
+1. Create the database:
 
         $ rake db:create
 
-2. Migrate a database:
+2. Migrate the database:
 
         $ rake db:migrate
 
