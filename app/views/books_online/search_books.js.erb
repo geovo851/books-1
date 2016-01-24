@@ -1,0 +1,3 @@
+$('tbody#books').html('<%= escape_javascript render(partial: "book", collection: @books, as: :book) %>');
+
+$('#paginator').html('<%= escape_javascript(paginate(@books, remote: true).to_s) %>');

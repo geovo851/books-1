@@ -1,3 +1,4 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 .main-page-content {
@@ -24,6 +25,87 @@
   background-color: #003366;
 }
 
+.paginate-centre{
+  text-align: center;
+}
+
+.page-header {
+  border-bottom: 0px;
+}
+
+.book_title {
+  font-weight: bold;
+  font-family: serif sans-serif;
+  font-size: 30px;
+  a:link {
+    font-weight: bold;
+    font-family: serif sans-serif;
+    font-size: 17px;
+  }
+}
+
+.books-header {
+  font-family: serif sans-serif;
+  color: #622100;
+  font-size: 35px;
+  text-align: center;
+}
+
+.book-user {
+  float: left;
+  color: #0099CC;
+  font-weight: bold;
+  margin-right: 10px;
+  .by {
+    color: #686868;
+  }
+}
+
+.book-author-date {
+  color: #686868;
+  font-weight: bold;
+  font-family: serif sans-serif;
+  float: left;
+  margin-bottom: 10px;
+  .author {
+    color: #0099CC;
+  }
+}
+
+.book-genres {
+  text-align: right;
+  color: #0099CC;
+  font-family: serif sans-serif;
+  margin-top: 16px;
+}
+
+.genres {
+  border: 1px dotted #BDBDBD;
+}
+
+.genres select {
+  width: 152px;
+}
+
+.image-book {
+    clear: both;
+  float: left;
+  margin-right: 20px;
+}
+
+.add-book {
+  float: right;
+  margin-top: -40px;
+}
+
+div.book_title {
+  float: left;
+}
+
+.book-content {
+  clear: both;
+}
+
 /* footer */
 
 footer {
@@ -45,5 +127,32 @@ footer {
       float: left;
       margin-left: 10px;
     }
+  }
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul {
+    padding-left: 10px;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
   }
 }

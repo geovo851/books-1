@@ -1,0 +1,30 @@
+<tr>
+  <td><%= link_to image_tag(book.photo), book_path(book) if book.photo? %> </td>
+  <td>
+    <div class="book_title"><%= link_to book.title, book_path(book) %></div>
+    <div class="book-genres">
+      <% unless book.genres.blank? %>
+        Genres:
+        <%= all_genres book.genres %>
+      <% end %>
+    </div>
+    <p class="book-content"><%= truncate(strip_tags(book.content), length: 1000) %></p>
+    <div class="book-user">
+      <span class="by">by </span><%= book.user.name %>
+    </div>
+    <% if permitted_to? :delete, book %>
+      <div>
+        <%= link_to edit_book_path(book), method: :get, class: 'btn btn-success btn-xs' do %>
+          <span class="glyphicon glyphicon-pencil"></span>
+          Edit
+        <% end %>
+        <%= link_to book_path(book), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' do %>
+          <span class="glyphicon glyphicon-remove"></span>
+          Delete
+        <% end %>
+        <%= link_to(title_link_draft(book), change_draft_path(book), method: :post,
+                    remote: true, class: 'btn btn-primary btn-xs', id: "#{book.id}") %>
+      </div>
+    <% end %>
+  </td>
+</tr>

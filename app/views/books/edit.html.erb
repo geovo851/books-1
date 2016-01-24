@@ -1,0 +1,12 @@
+<% provide(:title, @book.title) %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+    <h2>Edit book</h2>
+
+    <%= render partial: 'form', locals: { title_sumbit: 'Save' } %>
+
+    </div>
+  </div>
+</div>
