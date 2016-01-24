@@ -15,7 +15,7 @@ deploy:
     secure: hWjrrOEGDWAqkeGrGMa/xQpz3SjbYsNI4uMckjsn9QtlBfd+H50KRU4d8ECK7jGicFFW1lDS13gmmATfK0IWzWqe58op/OmBXAa6degydpHfjf55448zQuUY0In/IYPu1kw6B4Cmbj39NJD5ZQxbGiekV1Wl/ZAYlYFoyNUJmy29T0rFn+FPO2DfKdbKlWxkNCd6jpdPcwnxqww94Ef7XeMjFH0O9q3azQO0R9pavOs0z85O0xQV0RpSkiJJNtEBXyvJYM8tpRKb3G150o5s+R+m8RYCr1AkK14C55iYUPii+yf5Gq7mn5k0wQdyH8VD9fZQR6yCSjRlUjr7PDr9WUsLr83MiIiGtamq2dbEs/8gWSPWvCadw/dydyccqdBRdpr1Na2EVnf+Z14+bTukcyKWy3eNzK1LdGgBhAesvJxmRJIDuY1BHqGy/9CITY4KcrcSartXvoApHADcv0VmvC+Fl9VUHpGScII98M40H7zmLU2GYHTOMlXxR2Qv6FGqk4eOtkgYJiLigwbimeM64eqQkfdeYW7UOvhuShJUMtN2VPfVA0Wl2DTDT8qGJ7ck5kA8IYu5ANYFhaD6kx7vVJuqSvb9KZC6MHOR9NKKLvV7gUcxxufkH6GxDs0DvMrcSEmpplCNUCSTuOtYQzTx2kI8ti6/EePYEUwTBFBcj38=
   app: books-1
   run:
-  - rake db:migrate
+  - rake db:seed
   - restart
   on:
     branch: master
